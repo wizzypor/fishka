@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.d-flex{
+			display: flex;
+		}
+		.box{
+			height: 100px;
+			width: 100px;
+			background-color: blue;
+			border:1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<button class="btn">Новый шаг от 0 до 5</button>
+	<div class="d-flex">
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+	</div>
+	<script>
+		let box = document.querySelectorAll('.box')
+		let btn = document.querySelector('.btn')
+		score = 0
+		btn.onclick = function(){
+			let temp1 = Math.random()*5
+			let n = Math.round(temp1)
+			score += n
+			alert(n)
+			box[score].style.background = 'url(fishka.png)'
+			box[score].style.backgroundSize = '100% 100%'
+		}
+	</script>
+</body>
+</html>
